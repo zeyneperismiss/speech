@@ -11,6 +11,7 @@ with sr.Microphone() as source:
     
     try:
         text = r.recognize_google(audio)
+        print(text)
     except:
         print('Repeat please')
         
