@@ -16,7 +16,7 @@ with sr.Microphone() as source:
     except:
         print('Repeat please')
         
-    if text == 'activate voice control':
+    if text == 'voice control':
         
             #r.adjust_for_ambient_noise(source, duration = 2) #records background noise for 1 second and adjusts to this noise level
             print('Speak Anything: ')
