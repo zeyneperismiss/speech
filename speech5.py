@@ -7,7 +7,7 @@ r = sr.Recognizer()
 with sr.Microphone() as source:
     r.adjust_for_ambient_noise(source, duration = 2)
     print('adjusted')
-    audio = r.record(source,duration=5)
+    audio = r.record(source,duration=10)
     
     try:
         text = r.recognize_google(audio)
@@ -16,11 +16,11 @@ with sr.Microphone() as source:
         print('Repeat please')
         
     if text == 'activate voice control':
-        
+        sleep(5)
         with sr.Microphone() as source:
             #r.adjust_for_ambient_noise(source, duration = 2) #records background noise for 1 second and adjusts to this noise level
             print('Speak Anything: ')
-            audio = r.record(source,duration=5)
+            audio = r.record(source,duration=10)
 
             try:
                 text = r.recognize_google(audio)
